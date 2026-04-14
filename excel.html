@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manis Lembut - Roti, Pudding & Kue Soes</title>
+    <style>
+        /* Import Font dari Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+        /* Variabel Warna Pastel */
+        :root {
+            --bg-color: #FFF5F5; /* Soft Pink */
+            --primary: #FFB6B9; /* Pastel Red/Pink */
+            --secondary: #FAE3D9; /* Peach */
+            --accent: #BBDED6; /* Pastel Mint */
+            --text-dark: #614124; /* Coklat Kopi untuk teks */
+            --text-light: #FFFFFF;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        nav h1 {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--secondary) 100%);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #7A5C43;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #FA9A9D;
+            transform: translateY(-3px);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .products h2::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background-color: var(--accent);
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: var(--secondary);
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-weight: 600;
+            /* Kamu bisa ganti background-color di atas dengan gambar asli menggunakan:
+               background-image: url('<img src="nama-foto-rotimu.jpg" alt="Stuffed Roti" style="width: 100%; border-radius: 15px;">'); 
+               background-size: cover; */
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--accent);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: var(--text-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>ManisLembut.</h1>
+    </nav>
+
+    <section class="hero">
+        <h2>Sajian Manis untuk Harimu</h2>
+        <p>Nikmati kelembutan Stuffed Roti, lumer-nya Pudding, dan klasik-nya Kue Soes dengan bahan premium berkualitas tinggi.</p>
+        <a href="#menu" class="btn">Lihat Menu Kami</a>
+    </section>
+
+    <section id="menu" class="products">
+        <h2>Menu Favorit Kami</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">[ Foto Stuffed Roti ]</div>
+                <h3>Stuffed Roti</h3>
+                <p>Roti bantal super lembut dengan isian coklat lumer, keju manis, dan cream cheese yang berlimpah.</p>
+                <a href="https://wa.me/0812220196785" class="btn" style="padding: 8px 20px; font-size: 1rem;">Pesan Sekarang</a>
+            </div>
+
+            <div class="card">
+                <div class="card-img">[ Foto Pudding ]</div>
+                <h3>Silky Pudding</h3>
+                <p>Pudding sutra lumer di mulut dengan berbagai rasa pastel: Taro, Mango, dan Strawberry. Segar dinikmati dingin!</p>
+                <a href="https://wa.me/081220196785" class="btn" style="padding: 8px 20px; font-size: 1rem;">Pesan Sekarang</a>
+            </div>
+
+            <div class="card">
+                <div class="card-img">[ Foto Kue Soes ]</div>
+                <h3>Kue Soes Klasik</h3>
+                <p>Kue soes renyah di luar dengan isian vla vanilla rhum yang super creamy, wangi, dan tidak bikin eneg.</p>
+                <a href="https://wa.me/081220196785" class="btn" style="padding: 8px 20px; font-size: 1rem;">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>ManisLembut Bakery</strong></p>
+        <p>Dibuat dengan cinta setiap harinya. 💖</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">&copy; 2026 ManisLembut. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
